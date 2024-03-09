@@ -5,10 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome To Qviq</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-    <link rel="stylesheet" href="./style.css" />
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #f6f5f3;
+      }
+
+      #dynamic-name {
+        text-align: center;
+        color: #817c7c;
+      }
+
+      .OuterMost {
+        background-color: #ffffff;
+        margin: 20px auto;
+        max-width: 560px;
+        width: 100%;
+      }
+
+      .OuterMost > div {
+        padding: 4%;
+        width: 92%;
+      }
+
+      .nav img {
+        display: block;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        margin-bottom: 10px;
+      }
+      .nav-item ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 15px;
+        width: 60%;
+      }
+
+      .nav-item {
+        display: flex;
+        justify-content: center;
+      }
+      .nav {
+        margin-bottom: 20px;
+      }
+
+      li {
+        letter-spacing: 5px;
+        list-style: none;
+      }
+
+      .nav-item p {
+        font-size: x-large;
+      }
+
+      .welcome img {
+        width: 100%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .welcome p {
+        display: block;
+        text-align: center;
+        font-size: smaller;
+        margin: 20px 0px;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: black;
+      }
+
+      .welcome button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 170;
+        height: 50px;
+        padding: 10px 30px;
+        background-color: #fdc921;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      .middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+        background-color: #99d6ea;
+      }
+
+      .middle h3 {
+        display: flex;
+        justify-content: center;
+        padding: 30px 25px;
+      }
+
+      .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 115px;
+        height: 126px;
+        border-radius: 40px;
+        background-color: #ffff;
+      }
+
+      .number h1 {
+        font-size: 80px;
+        display: flex;
+        justify-content: center;
+        color: #6798c0;
+      }
+
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 50px;
+      }
+      .content {
+        display: flex;
+        gap: 25px;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-basis: 60%;
+        font-weight: 100;
+      }
+      .content p {
+        font-size: small;
+        font-weight: 100;
+      }
+
+      .content h2 {
+        font-weight: 100;
+      }
+
+      .btn {
+        display: block;
+        font-size: medium;
+        width: fit-content;
+        padding: 15px 30px;
+        background-color: #fdc921;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      .btn:hover{
+        background-color: #817c7c;
+        text-decoration: underline;
+      }
+
+      .bottom {
+        display: flex;
+        gap: 25px;
+      }
+      .bottom img {
+        width: 230px;
+      }
+
+      .bottom-content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .footer {
+        color: white;
+        background-color: #6798c0;
+        display: flex;
+      }
+      .footer a {
+        color: white;
+      }
+      .left-box {
+        font-size: small;
+        flex-basis: 40%;
+        font-weight: 100;
+        padding: 40px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .icons {
+        display: flex;
+        gap: 20px;
+        justify-content: start;
+      }
+
+      .right-box {
+        font-size: small;
+        font-weight: 100;
+        flex-basis: 60%;
+        padding: 40px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .footer h2 {
+        font-size: x-large;
+      }
+
+      @media (max-width: 560px) {
+        .box {
+          flex-direction: column;
+          margin: 20px 40px;
+        }
+        .number {
+          width: 100%;
+        }
+        .bottom {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .btn {
+          align-self: center;
+        }
+        .footer {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="OuterMost">
@@ -39,7 +272,9 @@
           reflect on our mental well-being and take steps towards a happier,
           healthier life.
         </p>
-        <button class="btn">Explore More</button>
+        <a href="https://qviq.io/pricing"
+          ><button class="btn">Pricing</button></a
+        >
       </div>
       <div class="middle">
         <h3>• Tips for a happier life •</h3>
@@ -95,8 +330,9 @@
             </p>
           </div>
         </div>
-
-        <button class="btn">Explore More</button>
+        <a href="https://qviq.io/about"
+          ><button class="btn">About Us</button></a
+        >
       </div>
       <div class="bottom">
         <img
@@ -109,33 +345,49 @@
             We're offering a complimentary mental health assessment and
             consultation. Take the first step towards a happier, healthier you
           </p>
-          <button class="btn">Book your session</button>
+          <a href="https://qviq.io/contact"><button class="btn">Contact</button></a>
+          
         </div>
       </div>
       <div class="footer">
         <div class="left-box">
-          <h2>
-            Contact Us</h2>
+          <h2>Contact Us</h2>
           <a href="">info@ehealth.com</a>
-          <p>123 Traveler's Lane
-
-            Cityville, CA 12345</p>
-          
+          <p>123 Traveler's Lane Cityville, CA 12345</p>
         </div>
         <div class="right-box">
           <h2>Connect with Us</h2>
-          <div class="icons"><a href=""><i class="ri-facebook-circle-fill"></i></a>
+          <div class="icons">
+            <a href=""><i class="ri-facebook-circle-fill"></i></a>
             <a href=""><i class="ri-instagram-line"></i></a>
             <a href=""><i class="ri-youtube-fill"></i></a>
-            <a href=""><i class="ri-twitter-x-fill"></i></a></div>
-          
-          <p>Let's make happiness a priority together. Remember, your mental well-being matters, today and every day.</p>
-          
+            <a href=""><i class="ri-twitter-x-fill"></i></a>
+          </div>
+
+          <p>
+            Let's make happiness a priority together. Remember, your mental
+            well-being matters, today and every day.
+          </p>
         </div>
       </div>
     </div>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./script.js"></script>
-  
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+    integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>let fname = "";
+
+    const dynamicName = document.querySelector("#dynamic-name");
+    
+    const apiName = async () => {
+      const res = await axios.get("https://randomuser.me/api/");
+      console.log(res);
+      fname = res.data.results[0].name.first;
+      dynamicName.innerHTML = `Hello ${fname}, Welcome  to the website`;
+    };
+    
+    apiName();</script>
 </html>
